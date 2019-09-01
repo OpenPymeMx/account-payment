@@ -11,6 +11,7 @@ from openerp import exceptions
 class AccountDaysOverdue(models.Model):
     _name = 'account.overdue.term'
     _description = 'Account Overdue Term'
+    _order = 'from_day ASC'
 
     name = fields.Char(size=10, required=True)
     from_day = fields.Integer(string='From day', required=True)
